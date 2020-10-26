@@ -45,5 +45,40 @@ namespace oct26UnitTestPractice_Tests
             // Assert - Check the result to make sure it matches what's expected.
             Assert.Equal(expected, output);
         }
+
+        [Theory]
+        [InlineData("YES", true)]
+        [InlineData("NO", true)]
+        [InlineData("Y", true)]
+        [InlineData("N", true)]
+
+        public void IsYesOrNo_Test3(string input, bool expected)
+        {
+            // Arrange - Set up any data, variables, objects, etc necessary for testing.
+            bool output;
+
+            // Act - Call the method, setter, whatever you're testing.
+            output = Program.IsYesOrNo(input);
+
+            // Assert - Check the result to make sure it matches what's expected.
+            Assert.Equal(expected, output);
+        }
+
+        [Theory]
+        [InlineData("n", true)]
+        [InlineData("s", false)]
+        [InlineData("", false)]
+
+        public void IsYesOrNo_Test4(string input, bool expected)
+        {
+            // Arrange - Set up any data, variables, objects, etc necessary for testing.
+            bool output;
+
+            // Act - Call the method, setter, whatever you're testing.
+            output = Program.IsYesOrNo(input);
+
+            // Assert - Check the result to make sure it matches what's expected.
+            Assert.Equal(expected, output);
+        }
     }
 }
