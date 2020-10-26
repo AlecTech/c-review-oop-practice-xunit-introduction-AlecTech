@@ -10,12 +10,11 @@ namespace oct26UnitTestPractice
         {
             Console.WriteLine("Enter yes or no or y or n");
 
-            string x = Console.ReadLine();
+           // string x = Console.ReadLine();
 
-            bool y = IsYesOrNo(x);
-            Console.WriteLine($"your input is {y}");
-            //bool b = true;
-           // Console.WriteLine(b.ToString());
+           // bool y = IsYesOrNo(x);
+           // Console.WriteLine($"your input is {y}");
+          
         }
        
         
