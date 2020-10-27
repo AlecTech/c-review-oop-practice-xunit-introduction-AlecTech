@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xunit;
 using Xunit.Sdk;
 
@@ -8,7 +9,7 @@ namespace oct26UnitTestPractice
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Enter yes or no or y or n");
+            Console.WriteLine("Enter YES or NO or Y or N");
 
            // string x = Console.ReadLine();
 
@@ -53,6 +54,31 @@ namespace oct26UnitTestPractice
             {
                 return false;
             }
+        }
+        /*
+         * Write assertions using Throws<FormatException>, 
+         * Throws<IndexOutOfRangeException>, 
+         * Throws<NullReferenceException> and 
+         * Throws<DivideByZero Exception>, to demonstrate your 
+         * understanding thereof. You can use built in C# methods.
+         */
+        public static void ThrowsFormatException()
+        {
+            int.Parse("Hello");
+        }
+
+        public static void ThrowsIndexOutOfRangeException()
+        {
+            List<Char> characters = new List<Char>();
+            characters.InsertRange(0, new Char[] { 'a', 'b', 'c', 'd', 'e', 'f' });
+            for (int ctr = 0; ctr <= characters.Count; ctr++)
+                Console.Write("'{0}'    ", characters[ctr]);
+        }
+
+        public static void ThrowsDivideByZero()
+        {
+            int y = 0;
+            int x = 10/y;
         }
 
     }

@@ -80,5 +80,44 @@ namespace oct26UnitTestPractice_Tests
             // Assert - Check the result to make sure it matches what's expected.
             Assert.Equal(expected, output);
         }
+
+        [Fact]
+        public void Exception_Test1()
+        {
+            // Arrange - N/A
+
+            // Act - N/A
+
+            // Assert
+            Assert.Throws<FormatException>(() => {
+                // This code block should throw a Exception of the type in the angle brackets.
+                Program.ThrowsFormatException();
+            });
+        }
+
+        [Fact]
+        public void Exception_Test2()
+        {
+            // Arrange - N/A
+
+            // Act - N/A
+
+            // Assert
+            Assert.Throws<IndexOutOfRangeException>(() => 
+            { Program.ThrowsIndexOutOfRangeException(); });
+        }
+
+        [Fact]
+        public void Exception_Test3()
+        {
+            // Arrange - N/A
+
+            // Act - N/A
+
+            // Assert
+            static void p() => Program.ThrowsDivideByZero();
+            Assert.Throws<DivideByZero>((Action)p);
+        }
+
     }
 }
